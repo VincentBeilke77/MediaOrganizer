@@ -1,0 +1,19 @@
+﻿@model MoviesViewModel
+
+@{
+    ViewBag.Title = "Movies";
+}
+
+@foreach (var movie in Model.Movies)
+{
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <img alt="movie image" />
+        <div class="figure">
+            <h5 class="float-right">@movie.Rating.Name</h5>
+            <h3>
+                <a asp-controller="Movies" asp-action="Details" asp-route-id="@movie.Id">@movie.Title</a>
+            </h3>
+            <p>@movie.LongDescription</p>
+        </div>
+    </div>
+}
