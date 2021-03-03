@@ -1,0 +1,15 @@
+﻿@model MovieModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="img-thumbnail">
+    <div class="figure-caption">
+        <h3 class="float-right">@Model.Rating.Name</h3>
+        <h3>
+            <a href="#">@Model.Title</a>
+        </h3>
+        <h4>@Model.ShortDescription</h4>
+        <p>@Model.LongDescription</p>
+    </div>
+</div>
